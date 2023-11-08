@@ -1,0 +1,13 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vm-template-rh
+  description: provision-a-vm
+  annotations:
+    backstage.io/kubernetes-id: vm-template-rh
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: api
+  lifecycle: production
+  owner: amargheritini

@@ -1,0 +1,21 @@
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: JobTemplate
+metadata:
+  name: vm-template-rh-job-template
+  namespace: aap
+spec:
+  tower_auth_secret: aapaccess
+  job_template_name: vm-template-rh
+  job_template_project: VMWare provisioning
+  ask_variables_on_launch: false
+  job_template_playbook: VM_provisioning
+  job_template_inventory: Demo Inventory
+  job_template_credentials: [CentOS root,VEGA-VCenter]
+  job_template_extra_vars:
+    vm_name: vm-rhsummit
+    vm_template_from: CentOS7
+    vm_library: CRIF-PoC
+    vm_cpus: 2
+    vm_memory: 2048    
+    
